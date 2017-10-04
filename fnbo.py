@@ -9,9 +9,9 @@
     Notes:
     This works only when U2 has a python license.  It also only works from a 
     command line and in the correct directory.
-    On my machine, I have a UniVerse account set up as
+    For example, if I have a UniVerse account set up as
     /usr/local/madev
-    In this directory, I have a source directory:
+    And in this directory I have a source directory:
     rdlpy
     From a command line, in the /usr/local/madev directory I can do
         /usr/uv/python/bin/python3
