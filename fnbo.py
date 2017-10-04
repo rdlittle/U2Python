@@ -1,7 +1,27 @@
 """
-    fnbo: A module to handle FNBO data
+    Author: Bob Little
+    Date  : October 1st, 2017
+    Description: A module to handle FNBO data.  Uses u2py functionality
+    
     Files:
         FNBO.XREF
+        
+    Notes:
+    This works only when U2 has a python license.  It also only works from a 
+    command line and in the correct directory.
+    On my machine, I have a UniVerse account set up as
+    /usr/local/madev
+    In this directory, I have a source directory:
+    rdlpy
+    From a command line, in the /usr/local/madev directory I can do
+        /usr/uv/python/bin/python3
+    Which puts me at a python command prompt:
+        >>>
+    Then:    
+        >>> from rdlpy import fnbo
+        >>> fnbo.findByArn(fnbo.textArn)
+        >>>
+        
 """
 import u2py
 
@@ -94,4 +114,5 @@ def setTransaction(transId,transRec):
     fnboXrefFile.lock(transId,u2py.LOCK_EXCLUSIVE)
     fnboXrefFile.write(transId,transRec,0)
     return
-    
+
+print("module name: "+__name__)
